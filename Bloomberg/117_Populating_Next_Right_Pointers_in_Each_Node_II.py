@@ -84,16 +84,16 @@ dummy -> 4-> 5 -> 7 -> NULL
 """
 
 def connect(self, node):
-    head = TreeLinkNode(0)
-    cur = head
-    while node:
-        cur.next = node.left
-        if cur.next:
-            cur = cur.next
-        cur.next = node.right
-        if cur.next:
-            cur = cur.next
-        node = node.next
-        if not node:
-            node = head.next
-            cur = head
+        head = TreeLinkNode(0)
+        cur = head
+        while node:
+            cur.next = node.left
+            if node.left:
+                cur = node.left
+            cur.next = node.right
+            if node.right:
+                cur = node.right
+            node = node.next
+            if not node:
+                node = head.next
+                cur = head

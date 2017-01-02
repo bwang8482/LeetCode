@@ -22,6 +22,10 @@ It should return [1,4,8,2,5,9,3,6,7].
 """Solution:
     1. using yield to output element alternately
 """
+"""
+yield:
+    http://stackoverflow.com/questions/231767/what-is-the-function-of-the-yield-keyword?page=1&tab=votes#tab-top
+"""
 
 class ZigzagIterator(object):
 

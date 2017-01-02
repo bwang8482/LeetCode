@@ -52,3 +52,30 @@ had--
 
 The character '-' signifies an empty space on the screen.
 """
+
+
+"""Solution 1:
+    1. check each line
+    2. add the valid space number without padding
+"""
+class Solution(object):
+    def wordsTyping(self, sentence, rows, cols):
+        """
+        :type sentence: List[str]
+        :type rows: int
+        :type cols: int
+        :rtype: int
+        """
+        # each sentence
+        sentence = ' '.join(sentence) + ' '
+        start = 0
+        length = len(sentence)
+        for i in range(rows):
+            start += cols
+            # if the start of next line is space, it means that the previous line perfectly fit
+            if sentence[start % length] == ' ':
+                start += 1
+            else:
+                while start > 0 and sentence[(start-1) % length] != ' ':
+                    start -= 1
+        return start/length

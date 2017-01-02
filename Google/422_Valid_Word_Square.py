@@ -86,6 +86,7 @@ class Solution(object):
             # Error 2: the left boundary should be 0 otherwise the left bottom part would be checked
             for j in range(0, len(words[i])):
                 # Error 1: the boundary should be i >= len(words[j])
+                # j >= size check the horizontal and i >= len(words[j]) check the vertical
                 if j >= size or i >= len(words[j]) or words[i][j] != words[j][i]:
                     return False
         return True

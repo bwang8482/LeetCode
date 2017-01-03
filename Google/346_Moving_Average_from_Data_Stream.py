@@ -34,6 +34,7 @@ class MovingAverage(object):
         if self.child == self.size:
             self.total -= self.queue.pop(0)
             self.child -= 1
+        # this step may cause overflow
         self.total += val
         self.child += 1
         self.queue.append(val)

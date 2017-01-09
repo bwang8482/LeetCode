@@ -26,6 +26,10 @@ Return:
 """
 
 """Solution:
+    1. this question is a search problem
+    1. using dfs to traverse the positions from four boundaries
+    2. return the positions that could be reached by both pacific and atlantic
+    3. 
 """
 
 
@@ -39,17 +43,23 @@ class Solution(object):
         self.directions = [(-1,0), (1,0), (0,-1), (0,1)]
         self.height = len(matrix)
         self.width = len(matrix[0])
+        # declare two visited array to track two oceans
         self.pacific = [[False for _ in range(self.width)] for _ in range(self.height)]
         self.atlantic = [[False for _ in range(self.width)] for _ in range(self.height)]
         ans = []
 
+        # search from top and bottom boundaries
         for x in range(self.width):
             self.dfs(0, x, self.pacific, matrix)
             self.dfs(self.height-1, x, self.atlantic, matrix)
+
+        # search from left and right boundaries
         for y in range(self.height):
             self.dfs(y, 0, self.pacific, matrix)
             # Error 3: typo, right boundary is self.width - 1 
             self.dfs(y, self.width-1, self.atlantic, matrix)
+        
+        # check the positions
         for j in range(self.height):
             for i in range(self.width):
                 if self.atlantic[j][i] and self.pacific[j][i]:

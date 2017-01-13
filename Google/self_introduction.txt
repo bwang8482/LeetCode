@@ -1,0 +1,22 @@
+hey, nice to meet you. just a brief self introduction, My name is Bangqi Wang, I am a senior undergraduate student in the university of illinois, urbana-champaign in computer engineering major. I have experience in data mining, machine learning, artificial intelllegence, system, web development, VR and so on. I am in dean's list for several years. I will graduate in may 2017 and I applied for the software engineer new grad position. It's really nice to meet you and I am really appreciate for your time. I hope you can have a great time with me.
+------------------------------------------------------------------
+currently i am working on deep learning for prostate cancer diagnosis as my senior thesis. This project combines the crowdsourcing with deep learning. I used the results from amazon mturk, a crowdsourcing server, to generate labels for deep learning dataset. Then, use deep learning to classify the prostate tissue images.
+
+the most challenging part in this project is the data deficiency. Because the biomedical dataset are rare and expensive. So, I need to build the deep learning neural network that can work on small dataset and avoid overfitting.
+
+In this case, I tried to solve the problem from several ways: the first is to enlarge the data set by randomly cutting high resolution images into several low-resolution images with randomly overlapping, and the second is to re-split the training dataset and validation dataset for each round instead of using the training dataset and validation set all the time, the last is to use L1, L2 loss regularization and dropout neural network to avoid overfitting. This is a one year project, so I am still working on this part. So far the accuracy is around 70%
+
+Another challenge for me is to decide to use deep learning. because deep learning rely on large dataset. but, I am really passionate for the new technology, no matter VR or deep learning. And compare to traditional machine learning neural network, deep learning have more hidden layers and those layers can extract the inner realationship from dataset more efficiently. And the most important part is that the traditional machine learning cannot reach high accuracy in cancer diagnosis, so this area need some breakthrough.
+
+There are also some things I would do differently, I tried to train the famous AlexNet neural network at first. However, Alexnet is too complicated with more than one hundred layers. The performance is extremely bad for small dataset. and this neural network is suitable for natural image classification. I wouldn't waste time in this part if I could start again.
+
+-----------------------------------------------------------------------------
+what brought you to Google and what has been the most challenging for you?
+I am working on Tensorflow and it is a deep learning framework developed by Google,
+Could you tell me some details about the groups in Google?
+
+I think I am all set. Do you have any questions for me?
+Thank you very much, I am appreciate for your time. I hope you had a great time with me.
+
+
+

@@ -15,10 +15,6 @@ quicksort:
 3. If the pivot is right to the k-1-th position, update right to be the left neighbor of the pivot;
 4. Else update left to be the right neighbor of the pivot.
 5. Repeat 2.
-
-heapsort:
-
-
 """
 
 class Solution(object):

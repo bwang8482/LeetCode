@@ -35,11 +35,11 @@ class Solution(object):
         self.height = len(grid)
         self.width = len(grid[0])
         self.start = []
-        self.
         for i in range(self.height):
             for j in range(self.width):
                 if grid[i][j] == 1:
                     self.start.append((i, j))
+
 
         def BFS(x, y):
             queue = collections.deque([x, y, 0])

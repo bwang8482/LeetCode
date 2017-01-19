@@ -38,7 +38,10 @@ Explanation: "abbbabbbc" occurs twice, but "abbbabbbc" can also be encoded to "2
 """Solution:
     1. this problem is dynamic programming problem with 2D array
     2. dp[i][j] means the shortest representation from start point i to end point j
-    3. 
+    3. cursor k means split [i,j] into repeated [i,k].
+    4. this is O(n^3) runtime algorithm, O(n) for length from 0 to len(s).
+    5. O(n) for start point i from 0 to end.
+    6. O(n) for try to split the string into substring from i to k.
 """
 
 class Solution(object):
@@ -49,15 +52,19 @@ class Solution(object):
         """
         length = len(s)
         dp = [['' for x in range(length)] for y in range(length)]
+        # iteration for length
         for l in range(length):
+            # iteration for start point
             for i in range(length-l):
                 j = i + l
                 subStr = s[i:j+1]
                 dp[i][j] = subStr
                 if j-i >= 4:
+                    # iteration for spliting: if dp[i][j] can be represented by two substring dp[i][k], dp[k+1][j]
                     for k in range(i,j):
                         if len(dp[i][k]) + len(dp[k+1][j]) < len(dp[i][j]):
                             dp[i][j] = dp[i][k] + dp[k+1][j]
+                    # iteration for repeating: if dp[i][j] contains any repeating substring
                     for k in range(len(subStr)):
                         repeatedStr = subStr[:k+1]
                         if repeatedStr != '' and len(subStr)%len(repeatedStr) == 0 and len(subStr.replace(repeatedStr,'')) == 0:

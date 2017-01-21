@@ -40,7 +40,11 @@ class Solution(object):
         # Tip: using 'or [0]' to handle the situation when previous list is empty
         return max([binary_words[i] * binary_words[j] for i in binary_words for j in binary_words if not i & j] or [0])
 
-
+"""Summary:
+    1. using ord() for str -> int
+    2. using max([] or [0]) to handle the situation when first [] is empty
+    3. return max of list, instead of calculate max first. 
+"""
 
 
 

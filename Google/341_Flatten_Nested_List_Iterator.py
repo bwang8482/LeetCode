@@ -21,7 +21,6 @@ By calling next repeatedly until hasNext returns false, the order of elements re
     3. if the upper element is list, pop the list and push all elements into stack again
 """
 
-
 # """
 # This is the interface that allows for creating nested lists.
 # You should not implement it, or speculate about its implementation
@@ -77,8 +76,6 @@ class NestedIterator(object):
             # Error 2: the list should be reversed
             self.stack.extend(self.stack.pop().getList()[::-1])
         return False
-
-        
 
 # Your NestedIterator object will be instantiated and called as such:
 # i, v = NestedIterator(nestedList), []

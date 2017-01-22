@@ -48,6 +48,7 @@ class Solution(object):
         length1, length2 = len(nums1), len(nums2)
         count = k
         for i in range(min(k, length1)):
+            # Tip: using heapq.heappush to push element
             heapq.heappush(queue, (nums1[i] + nums2[0], i, 0))
         # Error 1: remember to check if the queue is emtpy. K may be large
         while count != 0 and queue:
@@ -58,7 +59,10 @@ class Solution(object):
                 heapq.heappush(queue, (nums1[i] + nums2[j+1], i, j+1))
         return ans
 
-
+"""Summary:
+    this problem is actually a two pointers problem, using priority queue to store
+the locations of two pointers. 
+"""
 
 
 

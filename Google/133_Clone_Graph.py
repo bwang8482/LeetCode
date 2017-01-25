@@ -39,7 +39,7 @@ class Solution:
     # @param node, a undirected graph node
     # @return a undirected graph node
     def __init__(self):
-        # Tip: using __init__ function to initiaize global variables
+        # Tip: using __init__ function to initialize global variables
         self.visited = {}
         
     def cloneGraph(self, node):
@@ -53,6 +53,9 @@ class Solution:
             return clone
         return self.visited[node]
 
+"""Summary:
+    this problem is typical dfs problem. The new idea is to use __init__ to initialize the global variables
+"""
 
 
 

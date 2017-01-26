@@ -81,8 +81,6 @@ class Solution(object):
             length += 1
         return reservoir
         
-
-
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(head)
 # param_1 = obj.getRandom()

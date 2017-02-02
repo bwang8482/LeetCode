@@ -52,7 +52,7 @@ class Solution(object):
         :rtype: void Do not return anything, modify nums in-place instead.
         """
         self.size = len(nums)
-        median = sorted(nums)[]
+        median = float(sorted(nums)[self.size/2] + sorted(nums)[(self.size-1)/2]) / 2
         i, j, k = 0, 0, self.size - 1
         while j <= k:
             if nums[self.index(j)] > median:
